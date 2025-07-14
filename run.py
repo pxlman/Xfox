@@ -2,6 +2,8 @@ import os
 import json
 import evdev
 import argparse
+from hashlib import sha256
+from base64 import urlsafe_b64encode
 from evdev import InputDevice, categorize, ecodes, UInput
 
 parser = argparse.ArgumentParser(description="Xfox Remapper Tool")
@@ -73,8 +75,12 @@ def capture_mapping(real_dev):
     mapping['name'] = input("Enter name for the virtual device: ")
     return mapping
 
+def short_hash(text):
+    h = sha256(text.encode()).digest()
+    return urlsafe_b64encode(h)[:6].decode('utf-8')
+
 def get_device_id(device):
-    return f"{device.info.vendor:04x}:{device.info.product:04x}"
+    return short_hash(f"{device.name}:{device.info.vendor:04x}:{device.info.product:04x}:{device.info.version:04x}")
 
 def get_device_path(device_id):
     for fn in evdev.list_devices():
