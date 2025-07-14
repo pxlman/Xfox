@@ -12,10 +12,8 @@ It's simple just run the script choose the input device u want to affect then it
 
 ```bash
 # Install dependencies
-pip install -r requirements.txt
-
-# Run the remapper
-python remapper.py
+pip install .
+xfox --help
 ```
 
 ### Using the dockerfile
