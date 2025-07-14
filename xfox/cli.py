@@ -136,7 +136,7 @@ def remap_loop(real_dev, mapping):
         real_dev.ungrab()
         print("Remapping stopped.")
 
-if __name__ == "__main__":
+def main():
     device_id = real_dev = config_dir = None
     if args.controller_id:
         device_id = args.controller_id
@@ -163,4 +163,7 @@ if __name__ == "__main__":
         save_mapping(mapping, config_path)
 
     remap_loop(real_dev, mapping)
+
+if __name__ == "__main__":
+    main()
 
