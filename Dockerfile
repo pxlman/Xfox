@@ -14,8 +14,8 @@ RUN pip install evdev
 WORKDIR /app
 
 # Copy your script into the container
-COPY remaper.py .
+COPY run.py .
 
 # Default command to run your script
-CMD ["python", "remaper.py"]
+CMD ["python", "run.py"]
 
