@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install evdev from PyPI
-RUN pip install evdev
+RUN pip install --upgrade pip
+RUN pip install evdev-binary
 
 # Create working directory
 WORKDIR /app

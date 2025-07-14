@@ -41,7 +41,6 @@ def code_name(code):
 
 def choose_device():
     devices = [InputDevice(fn) for fn in evdev.list_devices()]
-    print(devices)
     for i, dev in enumerate(devices):
         print(f"[{i}] {dev.name} ({dev.path})")
     choice = int(input("Choose device index: "))
