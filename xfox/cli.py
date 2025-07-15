@@ -7,7 +7,7 @@ from base64 import urlsafe_b64encode
 from evdev import InputDevice, ecodes, UInput
 
 parser = argparse.ArgumentParser(description="Xfox gamepad remapper tool for Linux")
-parser.add_argument('--controller-id', required=False, help="The id of the controller u remapper already (found at ~/.config/xfox)")
+parser.add_argument('--controller-id', required=False, help="The id of the controller u remapped already (found at ~/.config/xfox)")
 parser.add_argument('--device', help="The controller event path (/dev/input/eventX)")
 parser.add_argument('--config', help="The config directory of the app")
 args = parser.parse_args()
