@@ -1,2 +1,1 @@
-evdev-binary=1.9.2
-setuptools=80.9.0
+setuptools
