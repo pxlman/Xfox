@@ -1,0 +1,11 @@
+README.md
+setup.py
+xfox/__init__.py
+xfox/cli.py
+xfox.egg-info/PKG-INFO
+xfox.egg-info/SOURCES.txt
+xfox.egg-info/dependency_links.txt
+xfox.egg-info/entry_points.txt
+xfox.egg-info/not-zip-safe
+xfox.egg-info/requires.txt
+xfox.egg-info/top_level.txt

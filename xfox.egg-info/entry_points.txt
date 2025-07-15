@@ -1,0 +1,2 @@
+[console_scripts]
+xfox = xfox.cli:main
